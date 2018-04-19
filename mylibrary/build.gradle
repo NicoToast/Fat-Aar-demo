@@ -1,13 +1,20 @@
 apply plugin: 'com.android.library'
 apply plugin: "com.mobbeel.plugin"
 android {
-    compileSdkVersion 27
+    compileSdkVersion global.androidTargetSdkVersion
+    buildToolsVersion global.androidBuildToolsVersion
+
+    compileOptions {
+        sourceCompatibility global.javacCompatibility
+        targetCompatibility global.javacCompatibility
+    }
+
     defaultConfig {
-        minSdkVersion 27
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdkVersion global.androidMinSdkVersion
+        targetSdkVersion global.androidTargetSdkVersion
+
+        versionCode Integer.valueOf(VERSION_CODE)
+        versionName VERSION_NAME
     }
 
     buildTypes {

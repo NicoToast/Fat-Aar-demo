@@ -23,3 +23,12 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext.global = [
+        androidMinSdkVersion: 14,
+        androidTargetSdkVersion: 26,
+        androidBuildToolsVersion: '27.0.3',
+        javacCompatibility: JavaVersion.VERSION_1_7,
+        rootProjectDir: "${rootProject.projectDir}",
+        buildTime: new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC")),
+]

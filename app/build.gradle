@@ -1,21 +1,22 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion global.androidTargetSdkVersion
+    buildToolsVersion global.androidBuildToolsVersion
+
+    compileOptions {
+        sourceCompatibility global.javacCompatibility
+        targetCompatibility global.javacCompatibility
+    }
+
     defaultConfig {
-        applicationId "com.ms.fatsartest"
-        minSdkVersion 27
-        targetSdkVersion 27
+        minSdkVersion global.androidMinSdkVersion
+        targetSdkVersion global.androidTargetSdkVersion
+
         versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        versionName "1.0.0"
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+
 
     repositories {
         flatDir {
@@ -31,5 +32,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation (name:'mylibrary-1.0', ext:'aar')
+//    implementation (name:'mylibrary-1.0', ext:'aar')
 }

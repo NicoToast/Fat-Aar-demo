@@ -1,18 +1,20 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion global.androidTargetSdkVersion
+    buildToolsVersion global.androidBuildToolsVersion
 
-
+    compileOptions {
+        sourceCompatibility global.javacCompatibility
+        targetCompatibility global.javacCompatibility
+    }
 
     defaultConfig {
-        minSdkVersion 27
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion global.androidMinSdkVersion
+        targetSdkVersion global.androidTargetSdkVersion
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        versionCode Integer.valueOf(VERSION_CODE)
+        versionName VERSION_NAME
     }
 
     buildTypes {
