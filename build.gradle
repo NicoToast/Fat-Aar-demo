@@ -3,13 +3,15 @@
 buildscript {
     
     repositories {
-        maven { url "https://plugins.gradle.org/m2/" }
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
         google()
-        jcenter()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0'
-        classpath "gradle.plugin.com.mobbeel.plugin:mobbeel-fataar:1.0.3"
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'gradle.plugin.me.lucas:fat-aar-plugin:1.0.9'
     }
 }
 

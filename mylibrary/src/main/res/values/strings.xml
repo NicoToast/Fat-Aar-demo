@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MyLibrary</string>
+    <string name="lib_button">button</string>
+    <string name="title_activity_base">BaseActivity</string>
 </resources>

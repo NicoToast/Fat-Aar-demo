@@ -2,12 +2,13 @@ package com.ms.fatsartest;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+import com.ms.mylibrary.BaseActivity;
+
+public class MainActivity extends BaseActivity implements View.OnClickListener{
     private static final String ADJUST_URL = "https://app.adjust.com/jgcx7a";
     private static final String GOOD_AD_URL = "http://click.goodadtracking.com/link/b8JfcK";
 
