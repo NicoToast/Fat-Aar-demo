@@ -9,32 +9,16 @@ import android.widget.Button;
 import com.ms.mylibrary.BaseActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
-    private static final String ADJUST_URL = "https://app.adjust.com/jgcx7a";
-    private static final String GOOD_AD_URL = "http://click.goodadtracking.com/link/b8JfcK";
 
-    Button mButtonAdjust;
-    Button mButtonGoodAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mButtonAdjust = findViewById(R.id.bt_adjust);
-        mButtonGoodAd = findViewById(R.id.bt_good);
-        mButtonAdjust.setOnClickListener(this);
-        mButtonGoodAd.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.bt_adjust:
-                Intent adjustIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(ADJUST_URL));
-                startActivity(adjustIntent);
-                break;
-            case R.id.bt_good:
-                Intent goodAdIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(GOOD_AD_URL));
-                startActivity(goodAdIntent);
-                break;
-        }
+
     }
 }
